@@ -80,7 +80,7 @@ class WaybackMachineMiddleware:
 
             # schedule all of the snapshots
             for snapshot_request in snapshot_requests:
-                self.crawler.crawl(snapshot_request, spider)
+                self.crawler.engine.crawl(snapshot_request, spider)
 
             # abort this request
             raise UnhandledIgnoreRequest
